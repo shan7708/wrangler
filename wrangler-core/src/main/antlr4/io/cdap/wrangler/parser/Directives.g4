@@ -50,7 +50,7 @@ statements
  ;
 
 directive
-  : 'split-to-words' NAME                         #splitToWordsDirective
+  : 'split-to-words' NAME                         
   | command
     ( codeblock
     | identifier
