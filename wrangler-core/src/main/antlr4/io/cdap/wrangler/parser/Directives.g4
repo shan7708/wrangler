@@ -50,8 +50,9 @@ statements
  ;
 
 directive
- : command
-  (   codeblock
+  : 'split-to-words' NAME                         #splitToWordsDirective
+  | command
+    ( codeblock
     | identifier
     | macro
     | text
@@ -64,8 +65,9 @@ directive
     | stringList
     | numberRanges
     | properties
-  )*?
+    )*?
   ;
+
 
 ifStatement
   : ifStat elseIfStat* elseStat? '}'
